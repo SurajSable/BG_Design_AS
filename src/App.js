@@ -11,10 +11,10 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Manufacturing from './pages/Manufacturing';
 import Engineeringservices from './pages/Engineeringservices';
+import SoftwareServices from './pages/SoftwareServices';
 const App=()=> {
   
-  return (
-   
+  return ( 
  <div className='bg-img'>
    <Router>
         <Navbar/>
@@ -28,7 +28,7 @@ const App=()=> {
           <Route exact path="/footer" element={<Footer/>} />
           <Route exact path="/manufacturing" element={<Manufacturing/>} />
           <Route exact path="/engineering-services" element={<Engineeringservices/>} />
-
+          <Route exact path="/software-services" element={<SoftwareServices/>} />
         </Routes>
         <Footer/>
       </Router>

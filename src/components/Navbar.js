@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-
-
 const Navbar = () => {
   const location = useLocation();
   // console.log(location.pathname)
@@ -46,11 +44,13 @@ const Navbar = () => {
               </li>
 
               <li
+                data-testid="mOver"
                 className="nav-item m-4 border border-black position-relative"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
+                data-testid="service"
                   className={`nav-link ${location.pathname === '/services' ? 'active text-dark bg-white' : ''}`}
                   style={{ fontFamily: 'Arial' }}
                   to="/services"
@@ -73,6 +73,11 @@ const Navbar = () => {
                     <div className='nav-item p-1'>
                       <Link to="/engineering-services" className="text-white link-underline link-underline-opacity-0 inline-block mt-2">
                         Engineering Services
+                      </Link>
+                    </div>
+                    <div className='nav-item p-1'>
+                      <Link to="/software-services" className="text-white link-underline link-underline-opacity-0 inline-block mt-2">
+                        Software Services
                       </Link>
                     </div>
                   </div>
